@@ -1,0 +1,176 @@
+<!-- Header Area -->
+<header class="header" >
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1 col-md-1 col-12">
+                    <!-- Start Logo -->
+                    <div class="logo">
+                        <a routerLink="/"><img src="assets/img/logo2.png" alt="#"></a>
+                    </div></div>
+                    <!-- End Logo -->
+                <div class="col-lg-3 col-md-5 col-12">
+                    <!-- Contact -->
+                    <ul class="top-link">
+                        <li><a href="#">{{'Über uns'|translate}}</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#">{{'Kontaktieren Sie uns'|translate}}</a></li>
+                       
+                    </ul>
+                    <!-- End Contact -->
+                </div>
+                <div class="col-lg-6 col-md-7 col-12">
+                    <!-- Top Contact -->
+                    <ul class="top-contact">
+                        <li><i class="fa fa-phone"></i>+49 1590 302 633 7</li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:info@gatagmbh.de">info&#64;gatagmbh.de</a></li>
+                        <li><i class="fa fa-linkedin"></i><a href="mailto:info@gatagmbh.de">linkedin</a></li>
+                    </ul>
+                    <!-- End Top Contact -->
+                </div>
+                <div class="col-lg-2 col-md-2 col-12">
+                         <div class="form-select">
+                            <select #selectedLang  (change)="changeLanguageTo(selectedLang.value)">
+                                <option *ngFor="let Language of change.getLangs()" [value]="Language"
+                                [selected]="Language === change.currentLang">{{Language}}</option>
+                               
+                            </select>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- End Topbar -->
+    <!-- Header Inner -->
+    <div class="header-inner" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'notfixed'">
+        <div class="container">
+            <div class="inner">
+               
+                   
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav" style="color: black;">
+                    <li class="nav-item active">
+                      <a class="nav-link" routerLink="">{{'home'|translate}} <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{'Was wir tun'|translate}}
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" routerLink="/UmwegezumZiel">ohne Umwege zum ziel</a>
+                          <a class="dropdown-item" routerLink="/researchWirRecherchierenDesBedarf">research: Wir recherchieren des bedarf</a>
+                          <a class="dropdown-item" routerLink="/beraterKnowhowWirhOrenDasGrasWach">berater-knowhow:Wir hÖren das Gras Wach</a>
+                          <a class="dropdown-item" routerLink="/unserNetzwerkWirBringenSieinkontak">unser Netzwerk:Wir bringen Sie in kontak</a>
+                          <a class="dropdown-item" routerLink="/headhunterWirverschaffenIhnenZugang">headhunter:Wir verschaffen Ihnen Zugang</a>
+                          <a class="dropdown-item" routerLink="/privateEquity">private equity</a>
+                          <a class="dropdown-item" routerLink="/unternehmensnachfolge">unternehmensnachfolge</a>
+                          <a class="dropdown-item" routerLink="/startUps">start-ups</a>
+                          <a class="dropdown-item" routerLink="/vorstandsportal">vorstandsportal</a>
+                          <a class="dropdown-item" routerLink="/zusatzlicheResearchleistungen">zusätzliche Researchleistungen</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{'Unsere kunden'|translate}}
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/kundenerfahrungen">kundenerfahrungen</a>
+                        <a class="dropdown-item" routerLink="/ArbeitgeberUndererKunden">Arbeitgeber underer Kunden</a>
+                        <a class="dropdown-item" routerLink="/ZahlenDatenFakten">Zahlen, Daten, Fakten</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{'Projektablauf'|translate}}
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/Positionierung">Positionierung</a>
+                        <a class="dropdown-item" routerLink="/ZielfirMentliste">Zielfir mentliste</a>
+                        <a class="dropdown-item" routerLink="/SchriftlicheUnterlagen">Schriftliche Unterlagen</a>
+                        <a class="dropdown-item" routerLink="/BusinessPortrats">Business Porträts</a>
+                        <a class="dropdown-item" routerLink="/Managerportratfilm">Managerporträtfilm</a>
+                        <a class="dropdown-item" routerLink="/Arbeitszeugnisse">Arbeitszeugnisse</a>
+                        <a class="dropdown-item" routerLink="/DigitalePrasenz">Digitale Präsenz</a>
+                        <a class="dropdown-item" routerLink="/Vorstellungsgesprach">Vorstellungsgespräch</a>
+                        <a class="dropdown-item" routerLink="/Unternhmensdossiers">Unternhmensdossiers</a>
+                        <a class="dropdown-item" routerLink="/Arbeitsvertragsangebote">Arbeitsvertragsangebote</a>
+                        <a class="dropdown-item" routerLink="/UnternehmensCheck">Unternehmens-Check</a>
+                        <a class="dropdown-item" routerLink="/Lektorat">Lektorat</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{'Wer wir sind'|translate}}                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/HansRainerVogel">Hans Rainer Vogel</a>
+                        <a class="dropdown-item" routerLink="/DrDanielDetambel">Dr.Daniel Detambel</a>
+                        <a class="dropdown-item" routerLink="/BuroleitungDrDetambel">Büroleitung Dr.Detambel</a>
+                        <a class="dropdown-item" routerLink="/Projeltmanager">Projeltmanager</a>
+                        <a class="dropdown-item" routerLink="/Researcher">Researcher</a>
+                        <a class="dropdown-item" routerLink="/Analysten">Analysten</a>
+                        <a class="dropdown-item" routerLink="/Schrifliches">Schrifliches</a>
+                        <a class="dropdown-item" routerLink="/FilmUndFoto">Film und Foto</a>
+                        <a class="dropdown-item" routerLink="/Ubersetzer">Übersetzer</a>
+                        <a class="dropdown-item" routerLink="/Service">Service</a>
+                        <a class="dropdown-item" routerLink="/WirFordernExzellenz">Wir fördern exzellenz</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{'Premium-service&ratgeber'|translate}}                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/InfoDienstPersonalia">Info-dienst: personalia</a>
+                        <a class="dropdown-item" routerLink="/InfoDienstHeadhunter">Info-dienst: Headhunter</a>
+                        <a class="dropdown-item" routerLink="/InsiderDossierVerdeckterStellenmarkt">Insider-Dossier: Verdeckter stellenmarkt</a>
+                        <a class="dropdown-item" routerLink="/Podcast">Podcast</a>
+                        <a class="dropdown-item" routerLink="/VAndDImDialog">V&D im dialog</a>
+                        <a class="dropdown-item" routerLink="/VAndDInside">V&D inside</a>
+                        <a class="dropdown-item" routerLink="/Outplacement">Outplacement</a>
+                        <a class="dropdown-item" routerLink="/UnsereBuchpublikationen">Unsere Buchpublikationen</a>
+                        <a class="dropdown-item" routerLink="/FAQs">FAQs</a>
+                        <a class="dropdown-item" routerLink="/ExecutiveSearch">Executive search</a>
+                        <a class="dropdown-item" routerLink="/Karrierekiller">Karrierekiller</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{'Kontakt&Vorgespräch'|translate}}                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" routerLink="/Vorgesprach">Vorgespräch</a>          
+                        <a class="dropdown-item" routerLink="/Leistungsbroschure">Leistungsbroschüre</a>          
+                        <a class="dropdown-item" routerLink="/StandorteAnfarhrt">Standorte / Anfarhrt</a>          
+                        <a class="dropdown-item" routerLink="/BeiUnsZuGast">Bei uns zu Gast</a>          
+                        <a class="dropdown-item" routerLink="/Erreichbarkeit">Erreichbarkeit</a>          
+                        <a class="dropdown-item" routerLink="/ArbeitenBeiVandD">Arbeiten bei V&D</a>          
+                        <a class="dropdown-item" routerLink="/Impressum">Impressum</a>          
+                        <a class="dropdown-item" routerLink="/Datenschutz">Datenschutz</a>          
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              
+                              
+                        </div>
+                        <!--/ End Main Menu -->
+                    </div>
+                    <!--
+                    <div class="col-lg-1 col-12">
+                        <div class="get-quote">
+                            <a href="login.html" class="btn">Sign in</a>
+                        </div>
+                    </div>
+                     -->
+                </div>
+           
+    
+    <!--/ End Header Inner -->
+</header>
+<!-- End Header Area -->
